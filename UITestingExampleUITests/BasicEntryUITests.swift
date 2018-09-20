@@ -19,7 +19,7 @@ class BasicEntryUITests: XCTestCase {
         application.launch()
     }
 
-    func testAddingEntry() {
+    func testAddingAndDeletingEntry() {
         let zeroLabel = "0"
         
         MasterPage(testCase: self)
@@ -37,6 +37,9 @@ class BasicEntryUITests: XCTestCase {
             
             // Master page
             .verifyMasterPageIsShowing()
+            .verifyTableCellCount(is: 1)
+            .deleteCell(at: 0)
+            .verifyTableCellCount(is: 0)
     }
 
 }

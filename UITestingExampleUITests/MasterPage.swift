@@ -27,6 +27,10 @@ struct MasterPage: TestPage {
         return table.cells.element(boundBy: index)
     }
     
+    fileprivate func deleteButton(for cell: XCUIElement) -> XCUIElement {
+        return cell.buttons["Delete"]
+    }
+
     
     // MARK: - Actions
     
@@ -41,6 +45,16 @@ struct MasterPage: TestPage {
         testCase.expect(exists: cell, file: file, line: line)
         cell.tap()
         return DetailPage(testCase: testCase)
+    }
+    
+    @discardableResult func deleteCell(at index: Int, file: String = #file, line: UInt = #line) -> MasterPage {
+        let cell = self.cell(at: index)
+        testCase.expect(exists: cell, file: file, line: line)
+        cell.swipeLeft()
+        let deleteButton = self.deleteButton(for: cell)
+        testCase.expect(exists: deleteButton, file: file, line: line)
+        deleteButton.tap()
+        return self
     }
     
     
