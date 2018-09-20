@@ -36,12 +36,11 @@ struct MasterPage: TestPage {
         return self
     }
     
-    // TODO: Return DetailPage when exists
-    @discardableResult func tapOnCell(at index: Int, file: String = #file, line: UInt = #line) -> MasterPage {
+    @discardableResult func tapOnCell(at index: Int, file: String = #file, line: UInt = #line) -> DetailPage {
         let cell = self.cell(at: index)
         testCase.expect(exists: cell, file: file, line: line)
         cell.tap()
-        return self
+        return DetailPage(testCase: testCase)
     }
     
     

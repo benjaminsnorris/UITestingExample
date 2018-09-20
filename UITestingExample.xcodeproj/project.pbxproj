@@ -19,6 +19,7 @@
 		E71BBFB221540D2F00375BF5 /* Matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71BBFB021540D2F00375BF5 /* Matchers.swift */; };
 		E71BBFB421540DAF00375BF5 /* MasterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71BBFB321540DAF00375BF5 /* MasterPage.swift */; };
 		E71BBFB621540DFA00375BF5 /* TestPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71BBFB521540DFA00375BF5 /* TestPage.swift */; };
+		E71BBFB82154111600375BF5 /* DetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71BBFB72154111600375BF5 /* DetailPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		E71BBFB021540D2F00375BF5 /* Matchers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matchers.swift; sourceTree = "<group>"; };
 		E71BBFB321540DAF00375BF5 /* MasterPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterPage.swift; sourceTree = "<group>"; };
 		E71BBFB521540DFA00375BF5 /* TestPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPage.swift; sourceTree = "<group>"; };
+		E71BBFB72154111600375BF5 /* DetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			children = (
 				E71BBFA22151958B00375BF5 /* UITestingExampleUITests.swift */,
 				E71BBFB321540DAF00375BF5 /* MasterPage.swift */,
+				E71BBFB72154111600375BF5 /* DetailPage.swift */,
 				E71BBFB521540DFA00375BF5 /* TestPage.swift */,
 				E71BBFB021540D2F00375BF5 /* Matchers.swift */,
 				E71BBFA42151958B00375BF5 /* Info.plist */,
@@ -291,6 +294,7 @@
 				E71BBFB221540D2F00375BF5 /* Matchers.swift in Sources */,
 				E71BBFA32151958B00375BF5 /* UITestingExampleUITests.swift in Sources */,
 				E71BBFB621540DFA00375BF5 /* TestPage.swift in Sources */,
+				E71BBFB82154111600375BF5 /* DetailPage.swift in Sources */,
 				E71BBFB421540DAF00375BF5 /* MasterPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
