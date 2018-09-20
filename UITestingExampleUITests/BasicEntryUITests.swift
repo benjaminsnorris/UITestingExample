@@ -20,19 +20,19 @@ class BasicEntryUITests: XCTestCase {
     }
 
     func testAddingEntry() {
-        let nowLabel = String(describing: Date())
+        let zeroLabel = "0"
         
         MasterPage(testCase: self)
             .verifyMasterPageIsShowing()
             .verifyTableCellCount(is: 0)
             .tapOnAddButton()
             .verifyTableCellCount(is: 1)
-            .verifyCell(at: 0, hasLabel: nowLabel)
+            .verifyCell(at: 0, hasLabel: zeroLabel)
             .tapOnCell(at: 0)
             
             // Detail page
             .verifyDetailPageIsShowing()
-            .verifyLabelText(is: nowLabel)
+            .verifyLabelText(is: zeroLabel)
             .tapOnBackButton()
             
             // Master page
