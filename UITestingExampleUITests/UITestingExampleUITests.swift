@@ -29,6 +29,27 @@ class UITestingExampleUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let app = XCUIApplication()
+        let table = app.tables.firstMatch
+        let addButton = app.navigationBars["Master"].buttons["Add"]
+        
+        XCTAssertEqual(table.cells.count, 0)
+        addButton.tap()
+        XCTAssertEqual(table.cells.count, 1)
+
+        let firstCell = table.cells.element(boundBy: 0)
+        let element = firstCell.label
+        firstCell.tap()
+        
+        let detailNavBar = app.navigationBars["Detail"]
+        XCTAssertTrue(detailNavBar.exists)
+        let detailDescriptionLabel = app.staticTexts["DetailViewController.detailDescriptionLabel"]
+        XCTAssertTrue(detailDescriptionLabel.exists)
+        XCTAssertEqual(detailDescriptionLabel.label, element)
+        
+        detailNavBar.buttons["Master"].tap()
+        XCTAssertTrue(addButton.exists)
     }
 
 }
